@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Some & Every Methods</title>
+  </head>
+  <body>
+    <script>
+      // >Array Some
+      let ages = [10, 11, 12, 19, 21, 24, 50];
+      document.write(ages + "<br><br>");
+      let a = ages.some((Val, Index) => {
+        return Val >= 18;
+      }); //if condition pass only one value it will return that is boolean true or false
+      document.write("value : " + a + "<br><br>");
+
+      // Array Every Methods
+      let age = [19, 21, 24, 50];
+      let c = age.every((Val, Index) => {
+        return Val >= 18;
+      }); //It return a value when every value passes the condition if one value also it fails it will retun false
+      document.write("value : " + c + "<br><br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Open & Close</title>
+  </head>
+  <button onclick="Open()">Open</button>
+  <button onclick="Close()">close</button>
+  <body>
+    <script>
+      let Mywindow;
+      //open(https:google.com, _blank/parent, width/height) the link which u wanted to open
+      function Open() {
+        Mywindow = window.open();
+      }
+      function Close() {
+        Mywindow.close();
+      }
+    </script>
+  </body>
+</html>

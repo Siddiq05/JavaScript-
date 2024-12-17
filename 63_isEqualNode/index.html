@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isEqualNode</title>
+  </head>
+  <body>
+    <ul id="list1">
+      <li class="ABC">Apple</li>
+      <li>Mango</li>
+      <li>Gauva</li>
+      <li>Pineapple</li>
+      <li class="Pappy">Pappy</li>
+    </ul>
+    <ul id="list2">
+      <li>Carrot</li>
+      <li class="abc">Apple</li>
+      <li class="Pappy">Pappy</li>
+    </ul>
+    <script>
+      const List1 = document.getElementById("list1").children[0];
+      console.log(List1);
+
+      const List2 = document.getElementById("list2").children[1];
+      console.log(List2);
+
+      const equal = List1.isEqualNode(List2);
+      console.log(equal); // attribute also be same
+
+      const List11 = document.getElementById("list1").lastElementChild;
+      console.log(List11);
+
+      const List21 = document.getElementById("list2").children[2];
+      console.log(List21);
+
+      const equal1 = List11.isEqualNode(List21);
+      console.log(equal1);
+    </script>
+  </body>
+</html>

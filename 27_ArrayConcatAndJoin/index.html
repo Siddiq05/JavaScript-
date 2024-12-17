@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Concat & Join</title>
+  </head>
+  <body>
+    <script>
+      // Array Concat
+      let a = ["Lion", "Tiger", "Panther"];
+      let b = a.concat("Sheep", "Goat");
+      let c = ["Horse", "Zebra", "Donkey"];
+      document.write(a + "<br>");
+      document.write(b + "<br>");
+      document.write(c + "<br>");
+      let d = a.concat(b, c);
+      document.write(d + "<br><br>");
+
+      // Array Join
+      let ab = ["Lion", "Tiger", "Panther"];
+      let joins = ab.join("<br>");
+      document.write(joins + "<br>");
+    </script>
+  </body>
+</html>

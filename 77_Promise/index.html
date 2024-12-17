@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      // let con = false;
+      // let prom = new Promise((resolve, reject) => {
+      //   if (con) {
+      //     resolve("it got resloved");
+      //   } else {
+      //     reject("it got reject");
+      //   }
+      // });
+      // prom
+      //   .then((result) => {
+      //     console.log(result);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+
+      let con = true;
+      function prom(con) {
+        console.log("fetching data"); //pending message
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (con) {
+              resolve("it got resloved");
+            } else {
+              reject("it got reject");
+            }
+          }, 2000);
+        });
+      }
+
+      prom(con)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

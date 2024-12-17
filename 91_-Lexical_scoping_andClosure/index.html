@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>-Lexical scoping and Closure</title>
+  </head>
+  <body>
+    <button class="blue">blue</button>
+    <button class="red">red</button>
+    <script>
+      // Lexical scoping
+      function Name() {
+        console.log("John");
+        function Child1() {
+          console.log("John jr1");
+        }
+        function Child2() {
+          console.log("John jr2");
+        }
+        Child1();
+        Child2();
+      }
+      Name();
+      // Child1(); // Uncaught ReferenceError: Child1 is not defined
+      // Child2(); // Uncaught ReferenceError: Child2 is not defined
+
+      //Closure
+
+      function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+          console.log(name);
+        }
+        return displayName; // returns a whole Lexical scope of displayName() function
+      }
+
+      const myFunc = makeFunc();
+      myFunc();
+
+      function clickHandler(Color) {
+        // document.body.style.backgroundColor = `${Color}`;
+        return function () {
+          document.body.style.backgroundColor = `${Color}`;
+        };
+      }
+
+      document.querySelector(".blue").onclick = clickHandler("blue");
+      document.querySelector(".red").onclick = clickHandler("red");
+    </script>
+  </body>
+</html>

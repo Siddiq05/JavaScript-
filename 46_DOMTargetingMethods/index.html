@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Targeting Methods</title>
+  </head>
+  <body>
+    <h1 id="Head1">DOM</h1>
+    <p class="para">Lorem ipsum dolor sit amet.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="para">Lorem ipsum dolor sit.</p>
+    <script>
+      let doc = document;
+      console.log(doc);
+      let doc1 = document.all;
+      console.log(doc1);
+      let doc2 = document.all[6];
+      console.log(doc2);
+      let doc3 = document.head;
+      console.log(doc3);
+      let doc4 = document.title;
+      console.log(doc4);
+
+      //getElementById()
+      let h1 = document.getElementById("Head1");
+      console.log(h1);
+
+      //getElementsByClassName()
+      let p = document.getElementsByClassName("para");
+      console.log(p);
+      let p0 = document.getElementsByClassName("para")[0];
+      console.log(p0);
+
+      //getElementsByClassName()
+      let pTag = document.getElementsByTagName("p");
+      console.log(pTag);
+      let pTag0 = document.getElementsByTagName("p")[0];
+      console.log(pTag0);
+    </script>
+  </body>
+</html>

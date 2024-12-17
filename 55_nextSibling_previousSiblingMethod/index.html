@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      nextSibling & nextElementSibling & previousSibling & nextElementSibling
+      Method
+    </title>
+    <style>
+      .outer {
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: rgb(18, 105, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner {
+        height: 300px;
+        width: 350px;
+        background-color: rgb(80, 181, 18);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .inner div {
+        height: 100px;
+        width: 100px;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div id="Child-A">A</div>
+        <div>B</div>
+        <div id="Child-C">C</div>
+        <div>D</div>
+        <div id="Child-E">E</div>
+      </div>
+    </div>
+    <script>
+      // nextSibling & nextElementSibling
+      let a = document.getElementById("Child-C").nextSibling;
+      console.log(a); //gives a text node because there is a space b/w div C and div D
+
+      let b = document.getElementById("Child-C").nextElementSibling;
+      console.log(b); // gives a div D
+      b.style.backgroundColor = "crimson";
+
+      // previousSibling & nextElementSibling
+      let c = document.getElementById("Child-C").previousSibling;
+      console.log(c); //gives a text node because there is a space b/w div B and div C
+
+      let d = document.getElementById("Child-C").previousElementSibling;
+      console.log(d); // gives a div B
+      d.style.backgroundColor = "aqua";
+
+      // //
+      // //
+      // //
+      // //
+      let e = document.getElementById("Child-A").previousSibling;
+      console.log(e); // gives a text node because there is a space b/w inner and div A
+
+      let f = document.getElementById("Child-A").previousElementSibling;
+      console.log(f); //Gives null becuz no previous element is present before A
+
+      let g = document.getElementById("Child-A").nextElementSibling;
+      console.log(g); //Gives Div B
+
+      ////
+
+      ///
+      let h = document.getElementById("Child-E").previousSibling;
+      console.log(h); // gives a text node because there is a space b/w div D and div E
+
+      let i = document.getElementById("Child-E").previousElementSibling;
+      console.log(i); //Gives Div D
+
+      let j = document.getElementById("Child-E").nextElementSibling;
+      console.log(j); //Gives null becuz no next element is present after E
+    </script>
+  </body>
+</html>

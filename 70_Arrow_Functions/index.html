@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <script>
+      const Add = (a, b) => {
+        return a + b;
+      };
+
+      console.log(Add(10, 20));
+      console.log(Add);
+
+      const Sub = (a, b) => `Sum = ${a - b}`; //only when single line code is there
+      console.log(Sub(10, 20));
+      console.log(typeof Sub);
+    </script>
+  </body>
+</html>

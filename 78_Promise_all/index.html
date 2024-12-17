@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise.all</title>
+  </head>
+  <body>
+    <script>
+      // let p1 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("First Promise");
+      //     resolve(1);
+      //   }, 1000);
+      // });
+
+      // let p2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Second Promise");
+      //     resolve(2);
+      //   }, 2000);
+      // });
+
+      // let p3 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Third Promise");
+      //     resolve(3);
+      //   }, 3000);
+      // });
+
+      // Promise.all([p1, p2, p3])
+      //   .then((result) => {
+      //     let Total = 0;
+      //     result.forEach((item) => {
+      //       Total += item;
+      //     });
+      //     console.log(`Total : ${Total}`);
+      //   })
+      //   .catch((error) => {
+      //     console.log(`Error : ${error}`);
+      //   });
+
+      // //Promise.all ---> if all the promises will reslove at that time only then function will work if any of one promise fail to reslove then catch fucntion will work
+
+      // let p4 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("First Promise");
+      //     resolve(1);
+      //   }, 4000);
+      // });
+
+      // let p5 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Second Promise has Failed");
+      //     reject("Failed");
+      //   }, 5000);
+      // });
+
+      // let p6 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Third Promise");
+      //     resolve(3);
+      //   }, 6000);
+      // });
+
+      // Promise.all([p4, p5, p6])
+      //   .then((result) => {
+      //     let Total = 0;
+      //     result.forEach((item) => {
+      //       Total += item;
+      //     });
+      //     console.log(`Total : ${Total}`);
+      //   })
+      //   .catch((error) => {
+      //     console.log(`Error : ${error}`);
+      //   });
+
+      //Reducing above thing
+
+      // function PromiseCall(Data, message) {
+      //   return function (resolve, reject) {
+      //     setTimeout(() => {
+      //       console.log(`${message} Promise`);
+      //       resolve(Data);
+      //     }, Data * 1000);
+      //   };
+      // }
+
+      // let p1 = new Promise(PromiseCall(1, "First"));
+      // let p2 = new Promise(PromiseCall(2, "Second"));
+      // let p3 = new Promise(PromiseCall(3, "Third"));
+
+      // Promise.all([p1, p2, p3])
+      //   .then((result) => {
+      //     let Total = 0;
+      //     result.forEach((item) => {
+      //       Total += item;
+      //     });
+      //     console.log(`Total : ${Total}`);
+      //   })
+      //   .catch((error) => {
+      //     console.log(`Error : ${error}`);
+      //   });
+
+      function PromiseCall(Data, message) {
+        return function (resolve, reject) {
+          setTimeout(() => {
+            console.log(`${message} Promise`);
+            resolve(Data);
+          }, Data * 1000);
+        };
+      }
+
+      let p1 = new Promise(PromiseCall(1, "First"));
+      let p2 = new Promise(PromiseCall(2, "Second"));
+      let p3 = new Promise(PromiseCall(3, "Third"));
+      let p4 = new Promise((resolve, reject) => {
+        reject("Promise 4 has been rejected");
+      });
+
+      Promise.all([p1, p2, p3, p4])
+        .then((result) => {
+          let Total = 0;
+          result.forEach((item) => {
+            Total += item;
+          });
+          console.log(`Total : ${Total}`);
+        })
+        .catch((error) => {
+          console.log(`Error : ${error}`);
+        });
+    </script>
+  </body>
+</html>

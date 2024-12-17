@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM querySelector & querySelectorAll</title>
+  </head>
+  <body>
+    <h1 id="Head1">DOM</h1>
+    <p class="para">Lorem ipsum dolor sit amet.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="para">Lorem ipsum dolor sit.</p>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <script>
+      let qs = (document.querySelector(".para").innerHTML = "<h1> Hello</h1>");
+      console.log(qs);
+      let qsa = document.querySelectorAll(".para");
+      qsa.forEach((element) => {
+        element.style.border = "5px dotted green"; // Applying the style to each element
+      });
+
+      console.log(qsa);
+      const ol = document.querySelectorAll("ol li");
+      ol.forEach((element) => {
+        element.style.border = "1px solid red"; // Applying the style to each element
+      });
+      console.log(ol);
+    </script>
+  </body>
+</html>

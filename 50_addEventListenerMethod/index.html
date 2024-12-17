@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventListener Method</title>
+    <style>
+      .outer {
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: rgb(18, 105, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(80, 181, 18);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button id="button">Click</button> -->
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <script>
+      // const Button = document.getElementById("button");
+      // Button.addEventListener("click", () => {
+      //   Button.innerText = "Clicked";
+      //   Button.style.background = "green";
+      // });
+      // document.querySelector(".outer").addEventListener(
+      //   "click",
+      //   () => {
+      //     alert("outer clicked");
+      //   },
+      //   true
+      // );
+      // document.querySelector(".inner").addEventListener(
+      //   "click",
+      //   () => {
+      //     alert("inner clicked");
+      //   },
+      //   true
+      // );
+      // document.querySelector(".outer").addEventListener(
+      //   "click",
+      //   () => {
+      //     alert("outer clicked");
+      //   },
+      //   false
+      // );
+      // document.querySelector(".inner").addEventListener(
+      //   "click",
+      //   () => {
+      //     alert("inner clicked");
+      //   },
+      //   false
+      // );
+      const abc = () => {
+        document.querySelector(".outer").style.backgroundColor = "red";
+        console.log("hi");
+      };
+      const xyz = () => {
+        document.querySelector(".outer").removeEventListener("mouseleave", abc);
+        console.log("hii");
+      };
+      document.querySelector(".outer").addEventListener("mouseleave", abc);
+
+      document.querySelector(".outer").addEventListener("click", xyz);
+    </script>
+  </body>
+</html>

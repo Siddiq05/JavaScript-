@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THIS and arrow function Implict_and_expilict_return</title>
+  </head>
+  <body>
+    <script>
+      // const user = {
+      //   Username: "Sid",
+      //   age: 27,
+      //   welcomeMessage: function () {
+      //     console.log(`Welcome ${this.Username}`); //this refers to the current context of a scope
+      //   },
+      // };
+      // user.welcomeMessage();
+      // user.Username = "Sam";
+      // user.welcomeMessage();
+
+      const user = {
+        Username: "Sid",
+        age: 27,
+        welcomeMessage: function () {
+          console.log(`Welcome ${this.Username}`);
+          // console.log(this);// this refers to the current context of a scope
+        },
+      };
+      console.log(this); //now the current context is empty as it is in node enviroment
+      // user.welcomeMessage();
+      // user.Username = "Sam";
+      // user.welcomeMessage();
+
+      function name() {
+        let userName = "Sid";
+        console.log(this.userName);
+      }
+      name(); // it only works with only objects not with functions ..
+
+      //expilict_return --->
+      let add = (a, b) => {
+        return a + b;
+      };
+      console.log(add(5, 3));
+
+      // Implict return ---> One line statment
+      let add1 = (a, b) => a + b;
+      let add2 = (a, b) => a - b;
+
+      console.log(add1(5, 5));
+      console.log(add2(5, 2));
+    </script>
+  </body>
+</html>

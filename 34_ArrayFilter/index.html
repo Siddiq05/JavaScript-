@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Filter</title>
+  </head>
+  <body>
+    <script>
+      let ages = [10, 11, 12, 19, 21, 24, 50];
+      document.write(ages + "<br><br>");
+      let a = ages.filter((Val, Index) => {
+        return Val >= 18;
+      }); //if condition passes it will return a new array
+      document.write("New Array : " + a + "<br><br>");
+    </script>
+  </body>
+</html>

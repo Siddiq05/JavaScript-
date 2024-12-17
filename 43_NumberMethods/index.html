@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Methods</title>
+  </head>
+  <body>
+    <script>
+      let Snum = "99";
+      document.write("type of : " + Snum + " is " + typeof Snum + "<br><br>");
+      let num = Number(Snum);
+      document.write(
+        "After conversion the type of : " +
+          num +
+          " is " +
+          typeof num +
+          "<br><br>"
+      );
+
+      //parseInt
+      let Sn = "99 88 77";
+      document.write("type of : " + Sn + " is " + typeof Sn + "<br><br>");
+      let n = parseInt(Sn);
+      document.write(
+        "After conversion the type of : " + n + " is " + typeof n + "<br><br>"
+      );
+
+      let S = "099.00";
+      document.write("type of : " + S + " is " + typeof S + "<br><br>");
+      let no = parseInt(S);
+      document.write(
+        "After conversion the type of : " + no + " is " + typeof no + "<br><br>"
+      );
+
+      // parseFloat
+      let Su = "99.23";
+      document.write("type of : " + Su + " is " + typeof Su + "<br><br>");
+      let nou = parseFloat(Su);
+      document.write(
+        "After conversion the type of : " +
+          nou +
+          " is " +
+          typeof nou +
+          "<br><br>"
+      );
+      let Snn = "99 88 77";
+      document.write("type of : " + Snn + " is " + typeof Snn + "<br><br>");
+      let nn = parseFloat(Snn);
+      document.write(
+        "After conversion the type of : " + nn + " is " + typeof nn + "<br><br>"
+      );
+
+      //isFinite
+      let a = 100;
+      document.write("type of : " + a + " is " + typeof a + "<br><br>");
+      let b = isFinite(a);
+      document.write(b + "<br><br>");
+      let c = "100.00";
+      document.write("type of : " + c + " is " + typeof c + "<br><br>");
+      let d = isFinite(c);
+      document.write(
+        "After conversion the type of : " + d + " is " + typeof d + "<br><br>"
+      );
+      document.write(d + "<br><br>");
+      let e = "Hello";
+      document.write("type of : " + e + " is " + typeof e + "<br><br>");
+      let f = isFinite(e);
+      document.write(f + "<br><br>");
+
+      //Number.isInteger
+      let g = 100;
+      let h = Number.isInteger(g);
+      document.write(h + "<br><br>");
+      let i = "100";
+      let j = Number.isInteger(i);
+      document.write(j + "<br><br>");
+      let k = 100.2;
+      let l = Number.isInteger(k);
+      document.write(l + "<br><br>");
+
+      //toFixed
+      let m = 5.56789;
+      document.write(m + "<br><br>");
+      let ni = m.toFixed(2);
+      document.write(ni + "<br><br>");
+
+      //toPrecision
+      let o = 5.76789;
+      document.write(o + "<br><br>");
+      let p = o.toPrecision(2);
+      document.write(p + "<br><br>");
+      let q = o.toPrecision(1);
+      document.write(q + "<br><br>");
+      let r = o.toPrecision(10);
+      document.write(r + "<br><br>");
+    </script>
+  </body>
+</html>

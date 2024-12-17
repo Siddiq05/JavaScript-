@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array of Objects</title>
+  </head>
+  <body>
+    <script>
+      let Student = [
+        { Name: "Sid", age: 27 },
+        { Name: "Khan", age: 30 },
+      ];
+      console.log(Student);
+      Student.forEach((value) => {
+        document.write("Name: " + value.Name + " Age: " + value.age + "<br>");
+      });
+    </script>
+  </body>
+</html>

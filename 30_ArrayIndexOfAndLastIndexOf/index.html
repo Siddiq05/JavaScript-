@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array indexOf & lastIndexOf</title>
+  </head>
+  <body>
+    <script>
+      // Array indexOf
+      let name = ["Sid", "John", "Tom", "Sam", "John"];
+      document.write(name + "<br><br>");
+      let a = name.indexOf("John"); // indexOf("SearchItem", StartIndex)
+      document.write(a + "<br><br>");
+      let b = name.indexOf("John", 2); // indexOf("SearchItem", StartIndex)
+      document.write(b + "<br><br>");
+      let c = name.indexOf("Neha"); // indexOf("SearchItem", StartIndex)
+      document.write(c + "<br><br>");
+
+      // Array lastIndexOf
+      let d = name.lastIndexOf("John", 2); // lastIndexOf("SearchItem", StartIndex) // Searches in reverse like StartIndex is 2 so it will give John before it that index is 1
+      document.write(d + "<br><br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cloneNode</title>
+  </head>
+  <body>
+    <ul id="list1">
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Gauva</li>
+      <li>Pineapple</li>
+      <li>Pappy</li>
+    </ul>
+    <ul id="list2">
+      <li>Carrot</li>
+      <li>Beans</li>
+    </ul>
+    <script>
+      const List1 = document.getElementById("list1").children[1];
+      console.log(List1);
+
+      const cloneElement = List1.cloneNode(true);
+      console.log(cloneElement);
+
+      const List2 = document.getElementById("list2");
+      List2.appendChild(cloneElement);
+    </script>
+  </body>
+</html>

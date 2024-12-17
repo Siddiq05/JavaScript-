@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global & Local Variable</title>
+  </head>
+  <body>
+    <script>
+      let x = 10; // Global Variable
+      function add() {
+        document.write(x);
+        document.write("<br>");
+        let y = 30; // Local Variable
+        return x + y;
+      }
+      let Add = add();
+      document.write(Add);
+      document.write("<br>");
+      document.write(x);
+      document.write("<br>");
+      // document.write(y); // This error will come because its Local Variable (Uncaught ReferenceError: y is not defined)
+      let y = 20;
+      document.write(y);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array find & findIndex</title>
+  </head>
+  <body>
+    <script>
+      // Array find
+      let ages = [10, 11, 12, 19, 21, 24, 50];
+      document.write(ages + "<br><br>");
+      let a = ages.find((Val, Index) => {
+        return Val >= 18;
+      }); //if condition pass only one value it will return
+      document.write("value : " + a + "<br><br>");
+
+      // Array findIndex
+
+      let b = ages.findIndex((Val, Index) => {
+        return Val >= 18;
+      });
+      document.write("Index : " + b + "<br><br>");
+    </script>
+  </body>
+</html>

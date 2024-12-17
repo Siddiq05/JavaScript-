@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insertAdjacentElement & insertAdjacent HTML</title>
+  </head>
+  <style>
+    #test {
+      height: 300px;
+      width: 400px;
+      margin: 0 auto;
+      background-color: bisque;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <h1>DOM Create Methods</h1>
+    <div id="test">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+        necessitatibus amet aliquam quam vel quisquam beatae, laboriosam
+        exercitationem! Consequatur, mollitia.
+      </p>
+    </div>
+    <script>
+      //insertAdjacentElement // used to insert element at desired positions
+      const newElement = document.createElement("h1");
+      console.log(newElement);
+
+      const newText = document.createTextNode("Hello");
+      console.log(newText);
+
+      newElement.appendChild(newText);
+      console.log(newElement); //adding text in p(newElement)
+
+      const divTest = document.getElementById("test");
+      console.log(test);
+
+      // 1) beforebegin//places the newElement before divtag
+      // divTest.insertAdjacentElement("beforebegin", newElement);
+
+      // 2) afterEnd // places the newElement after divtag
+      // divTest.insertAdjacentElement("afterEnd", newElement);
+
+      // 3) afterbegin  // places the newElement after divtag begins means first child of divtag
+      // divTest.insertAdjacentElement("afterbegin", newElement);
+
+      // 4)beforeend // places the newElement at end of  divtag means last child of divtag
+      divTest.insertAdjacentElement("beforeend", newElement);
+
+      //insertAdjacentHTML // this is used to create a tag with text in it and placed at desired positions
+      const newElement1 = "<h1>This is heading</h1>";
+      divTest.insertAdjacentHTML("beforebegin", newElement1);
+
+      //insertAdjacentText // this is used to create a text and placed at desired positions
+      const newText1 = "This is heading";
+      divTest.insertAdjacentText("beforeEnd", newText1);
+    </script>
+  </body>
+</html>

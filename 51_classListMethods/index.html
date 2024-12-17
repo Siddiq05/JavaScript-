@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList Methods</title>
+    <style>
+      .abc {
+        border: 2px solid black;
+        background-color: blueviolet;
+      }
+      .xyz {
+        background-color: rgb(174, 218, 29);
+        color: rgb(27, 120, 208);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="abc">Header</h1>
+    <script>
+      //add
+      document.querySelector(".abc").classList.add("cde", "fgh", "xyz");
+      //remove
+      document.querySelector(".abc").classList.remove("cde", "fgh");
+      //length
+      let len = document.querySelector(".abc").classList.length;
+      console.log(len);
+      //toggle
+      document.querySelector(".abc").addEventListener("click", () => {
+        document.querySelector(".abc").classList.toggle("xyz");
+      });
+
+      //item(index)
+      let b = document.querySelector(".abc");
+      console.log(b);
+      let item = document.querySelector(".abc").classList.item(1);
+      console.log(item);
+
+      //contains
+      let c = document.querySelector(".abc").classList.contains("xyz");
+      console.log(c);
+      let d = document.querySelector(".abc").classList.contains("npn");
+      console.log(d);
+    </script>
+  </body>
+</html>

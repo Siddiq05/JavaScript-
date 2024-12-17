@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Get & Set Value Methods</title>
+  </head>
+  <body>
+    <h1 id="Head1">DOM</h1>
+    <h2 id="Head2">Head2</h2>
+    <h2 id="Head3" style="border: 1px solid red">Head3</h2>
+    <h2 id="Head4" style="border: 1px solid blue">Head4</h2>
+    <p class="para">Lorem ipsum dolor sit amet.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="para">Lorem ipsum dolor sit.</p>
+    <h3 id="Head5" style="border: 1px solid rgb(0, 255, 42)">Head5</h3>
+    <script>
+      //DOM Get Methods
+
+      //innerHTML & innerText
+      let h2 = document.getElementById("Head2").innerHTML;
+      console.log(h2);
+      let h1 = document.getElementById("Head1");
+      console.log(h1.innerText);
+
+      //getAttribute("AttributeName")
+      let h3 = document.getElementById("Head3");
+      console.log(h3.getAttribute("style"));
+
+      //getAttributeNode("AttributeName")
+      let h4 = document.getElementById("Head4");
+      console.log(h4.getAttributeNode("style"));
+      console.log(h4.getAttributeNode("style").value);
+
+      //attributes
+      console.log(h4.attributes);
+      console.log(h4.attributes[0]);
+      console.log(h4.attributes[1].value);
+      console.log(h4.attributes[0].name);
+      // //DOM Get Methods
+
+      // //DOM Set Methods
+
+      // innerHTML & innerText
+      let h5 = document.getElementById("Head5");
+      // h5.innerText = "5Head";
+      // console.log(h5);
+      h5.innerHTML = "55Head";
+      console.log(h5);
+
+      //setAttribute("Attribute to replaced", "from which the attritube u will replace")
+      h5.setAttribute("id", "xyz");
+      console.log(h5.getAttribute("id"));
+      h5.setAttribute("style", "border : 10px dotted orange");
+
+      //attributes
+      console.log((h5.attributes[1].value = "border : 5px dotted yellow"));
+
+      //removeAttribute
+      // console.log(h5.removeAttribute("style"));
+    </script>
+  </body>
+</html>

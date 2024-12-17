@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+  <body>
+    <script>
+      // //length
+      let str = "JavaScript Learning is is";
+      // let a = str.length;
+      // document.write(a + "<br><br>");
+
+      // //toLowerCase & toUpperCase
+      // let b = str.toLowerCase();
+      // document.write(b + "<br><br>");
+      // let c = str.toUpperCase();
+      // document.write(c + "<br><br>");
+
+      // // includes
+      // let d = str.includes("Learning");
+      // document.write(d + "<br><br>");
+      // let e = str.includes("Great");
+      // document.write(e + "<br><br>");
+      // let f = str.includes("learning"); //Case Sensetive
+      // document.write(f + "<br><br>");
+      // document.write(e + "<br><br>");
+      // let g = str.includes("ing");
+      // document.write(g + "<br><br>");
+
+      // //startsWith & endsWith
+      // let h = str.startsWith("Java");
+      // document.write(h + "<br><br>");
+      // let i = str.startsWith("learning"); //Case Sensetive
+      // document.write(i + "<br><br>");
+      // let j = str.endsWith("Learning");
+      // document.write(j + "<br><br>");
+      // let k = str.endsWith("ipt");
+      // document.write(k + "<br><br>");
+      // let l = str.endsWith("ing");
+      // document.write(l + "<br><br>");
+
+      // // search
+      // let m = str.search("ing"); //gives index value of i
+      // document.write(m + "<br><br>");
+      // let n = str.search("hi");
+      // document.write(n + "<br><br>");
+
+      // //match
+      // let o = str.match("ing"); //gives array
+      // document.write(o + "<br><br>");
+      // let p = str.match("hi");
+      // document.write(p + "<br><br>");
+      // let q = str.match(/is/g);
+      // document.write(q + "<br><br>");
+
+      // //indexOf &
+      // let r = str.indexOf("is"); //gives index value of first is
+      // document.write(r + "<br><br>");
+      // let s = str.lastIndexOf("is"); //gives index value of last is
+      // document.write(s + "<br><br>");
+
+      // //replace(item to be replaced, value to place on replaced item)
+      // let t = str.replace("JavaScript", "PHP");
+      // document.write(t + "<br><br>");
+      // let v = str.replace("is", "or");
+      // document.write(v + "<br><br>");
+      // let u = str.replace(/is/g, "or"); //replaces Globally
+      // document.write(u + "<br><br>");
+
+      // //trim()
+      // let st = "   Java    ";
+      // // alert(st);
+      // // alert(st.trim());
+
+      //charAt
+      let w = str.charAt(0);
+      document.write(w + "<br><br>");
+
+      //charCodeAt
+      let x = str.charCodeAt(1);
+      document.write(x + "<br><br>"); //ASCII value of index
+
+      //charCodeAt
+      let y = String.fromCharCode(65);
+      document.write(y + "<br><br>"); //ASCII values
+
+      // concat
+      let str1 = " Hello";
+      let str2 = " Hi";
+      let z = str.concat(str1, str2);
+      document.write(z + "<br><br>");
+
+      //split
+      let ab = str.split(" ");
+      document.write(ab + "<br><br>");
+      let ac = str.split("a");
+      document.write(ac + "<br><br>");
+
+      //split
+      let ad = str.repeat(3);
+      document.write(ad + "<br><br>");
+
+      //slice(start, end)
+      let ae = str.slice(3, 12);
+      document.write(ae + "<br><br>");
+
+      //substr(start, end) & substring(start, end-1)
+      let af = str.substr(3);
+      document.write(af + "<br><br>");
+      let ag = str.substr(3, 5);
+      document.write(ag + "<br><br>");
+      let ah = str.substring(3, 5);
+      document.write(ah + "<br><br>");
+
+      //toString
+      let abc = 20;
+      document.write(typeof abc + "<br><br>");
+      document.write(abc + "<br><br>");
+      let ai = abc.toString();
+      document.write(typeof ai + "<br><br>");
+      document.write(ai + "<br><br>");
+    </script>
+  </body>
+</html>

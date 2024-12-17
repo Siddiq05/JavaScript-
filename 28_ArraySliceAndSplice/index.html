@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Slice & Splice</title>
+  </head>
+  <body>
+    <script>
+      // Array Slice
+      let a = ["Lion", "Tiger", "Panther", "Sheep", "Goat"];
+      document.write(a + "<br>");
+      let b = a.slice(3, 5); // slice(startIndex , EndIndex+1)
+      document.write(b + "<br>");
+      let c = a.slice(2);
+      document.write(c + "<br><br><br>");
+
+      // Array Splice
+      let name = ["Sid", "John", "Tom", "Sam"];
+      document.write(name + "<br>");
+      name.splice(2, 0, "Doe", "Danny"); // splice(startIndex, DeleteIndex, valuesToBeAdded)
+      document.write(name + "<br>");
+      name.splice(2, 4, "Elon", "Trump");
+      document.write(name + "<br>");
+    </script>
+  </body>
+</html>

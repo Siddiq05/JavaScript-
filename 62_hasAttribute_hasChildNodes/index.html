@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hasAttribute & hasChildNodes</title>
+    <style>
+      #test {
+        height: 300px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: bisque;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test">
+      <h2>Hello</h2>
+      <p>Lorem, ipsum dolor.</p>
+      <p class="xyz">Lorem ipsum dolor sit.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script>
+      //hasAttribute
+      const divtest = document.getElementById("test");
+      const find = divtest.hasAttribute("class"); // In div we have dont have class attribute
+      console.log(find);
+
+      //
+      const find1 = divtest.hasChildNodes(); // In div we have childs
+      console.log(find1);
+    </script>
+  </body>
+</html>

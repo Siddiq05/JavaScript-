@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replaceChild & removeChild</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Gauva</li>
+      <li>Pineapple</li>
+      <li>Pappy</li>
+    </ul>
+    <script>
+      const newElement = document.createElement("li");
+      const newText = document.createTextNode("Orange");
+      newElement.appendChild(newText);
+      console.log(newElement);
+
+      const List = document.getElementById("list");
+      const oldElement = List.children[4];
+      console.log(oldElement);
+
+      //replaceChild
+      List.replaceChild(newElement, oldElement);
+
+      //removeChild
+      List.removeChild(List.children[3]);
+    </script>
+  </body>
+</html>

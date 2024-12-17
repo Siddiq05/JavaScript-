@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immediately Invoked Function Expressions IIFE</title>
+  </head>
+  <body>
+    <script>
+      //in normal function also called as named IIFE
+      (function name() {
+        console.log("sid");
+      })();
+      //in arrow function also called as unknown IIFE
+      ((name) => {
+        console.log(name);
+      })("dost");
+    </script>
+  </body>
+</html>

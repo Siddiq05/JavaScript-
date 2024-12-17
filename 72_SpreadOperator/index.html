@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator</title>
+  </head>
+  <body>
+    <script>
+      // const Spread = (name, ...array) => {
+      //   console.log(array);
+      //   console.log(typeof array);
+      // };
+      // let arr = [10, 20, 30];
+      // console.log(Spread("Sid", ...arr));
+      let arr1 = [10, 20, 30];
+      let arr2 = [40, 50];
+      let num = 23;
+      console.log(arr1);
+      console.log(...arr1);
+      console.log([...arr1]);
+      console.log({ ...arr1 });
+      console.log([...arr1, arr2]); //adding arr2 in arr1 as an array
+      console.log([...arr2, ...arr1]); //concating to arrays
+      console.log([...arr1, num]); //adding num to array
+      console.log({ ...arr1, arr2 });
+      console.log({ ...arr1, num }); //adding num to object
+    </script>
+  </body>
+</html>

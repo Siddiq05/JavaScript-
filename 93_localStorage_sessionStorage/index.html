@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage & sessionStorage</title>
+  </head>
+  <body>
+    <script>
+      let key = prompt("Enter the key you want to set");
+      let value = prompt("Enter the value you want to set");
+      localStorage.setItem(key, value);
+      console.log(`Key: ${key} and Value: ${value}`);
+      if (key == "color") {
+        localStorage.removeItem(key);
+      } // if key isequal to color it wont store in local stroage but it will print in console ---> it will remove only a single key and value
+      // localStorage.clear() --> will clear the local stroage whatever is present
+
+      // sessionStorage ---> it works same as localstroage but it wont saves the data when page is refreshed or open again .... it only stores data for session like when we minimize and close the window at the time onlt data will will be there if we refresh or open the link in another tab data will be gone synatx is same just sessionStorage.clear()
+    </script>
+  </body>
+</html>

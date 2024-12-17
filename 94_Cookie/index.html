@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie</title>
+  </head>
+  <body>
+    <script>
+      console.log(document.cookie);
+      document.cookie = "Name=Sid2397";
+      console.log(document.cookie);
+      document.cookie = "Name=Sam";
+      console.log(document.cookie);
+      // for special characters
+      let str = "Hello, how are you?";
+      let encoded = encodeURIComponent(str);
+      console.log(encoded);
+      //       The space character is encoded as %20.
+      // The comma , becomes %2C.
+      // The question mark ? is encoded as %3F.
+      let encoded1 = "Hello%2C%20how%20are%20you%3F";
+      let decoded = decodeURIComponent(encoded1);
+      console.log(decoded); // Output: "Hello, how are you?"
+
+      let name = "John Doe";
+      let city = "New York";
+      let url =
+        "https://example.com?name=" +
+        encodeURIComponent(name) +
+        "&city=" +
+        encodeURIComponent(city);
+      console.log(url);
+      // Output: https://example.com?name=John%20Doe&city=New%20York
+
+      let url1 = "https://example.com?name=John%20Doe&city=New%20York";
+      let params = new URLSearchParams(url1.split("?")[1]);
+
+      let name1 = decodeURIComponent(params.get("name"));
+      let city1 = decodeURIComponent(params.get("city"));
+
+      console.log(name1); // "John Doe"
+      console.log(city1); // "New York"
+
+      let url2 = "https://example.com?name=John Doe&city=New York";
+      let encodedURIComponent = encodeURIComponent(url2);
+      let encodedURI = encodeURI(url2);
+
+      console.log(encodedURIComponent);
+      // Output: "https%3A%2F%2Fexample.com%3Fname%3DJohn%20Doe%26city%3DNew%20York"
+
+      console.log(encodedURI);
+      // Output: "https://example.com?name=John%20Doe&city=New%20York"
+    </script>
+  </body>
+</html>

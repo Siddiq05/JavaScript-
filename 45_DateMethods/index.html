@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Date Methods</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date();
+      document.write(date + "<br>");
+
+      //toDateString()
+      document.write(date.toDateString() + "<br>");
+
+      //getDate() & getDay() &getFullYear & getMonth()
+      document.write(date.getDate() + "<br>");
+      document.write(date.getMonth() + "<br>");
+      document.write(date.getFullYear() + "<br>");
+      document.write(date.getDay() + "<br>");
+
+      //getHours() & getMinutes() &getSeconds & getMilliseconds()
+      document.write(date.getHours() + "<br>");
+      document.write(date.getMinutes() + "<br>");
+      document.write(date.getSeconds() + "<br>");
+      document.write(date.getMilliseconds() + "<br>");
+
+      //setDate() & setFullYear() &setMonth & setHours()
+      date.setDate(21);
+      document.write(date + "<br>");
+      date.setFullYear(2010);
+      document.write(date + "<br>");
+      date.setMonth(10);
+      document.write(date + "<br>");
+      date.setHours(10);
+      document.write(date + "<br>");
+
+      //getDate() & getMonth() &getFullYear()
+      document.write(
+        date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Literals</title>
+  </head>
+  <body>
+    <script>
+      //old method
+      let name = "Sid",
+        age = 27;
+
+      let obj = {
+        name: name,
+        age: age,
+      };
+      console.log(obj);
+
+      //Using Object Literals
+      let obj1 = {
+        name,
+        age,
+      };
+      console.log(obj1);
+      console.log(obj1.name);
+
+      //Using variable as property name
+      let n = "name",
+        a = "age";
+      let obj2 = {
+        [n]: "Sid",
+        [a]: 27,
+      };
+      console.log(obj2);
+      console.log(obj2.n);
+      console.log(obj2.name);
+
+      //old method
+      let obj3 = {
+        ["Student" + n]: "Sid",
+        [a]: 27,
+        details: function () {
+          return `${this.Studentname} age is ${age}`;
+        },
+      };
+      console.log(obj3);
+      console.log(obj3.details());
+      console.log(obj3["details"]());
+
+      //new
+      let obj4 = {
+        ["Student" + n]: "Sid",
+        [a]: 27,
+        details() {
+          return `${this.Studentname} age is ${age}`;
+        },
+      };
+      console.log(obj4);
+      console.log(obj4.details());
+    </script>
+  </body>
+</html>

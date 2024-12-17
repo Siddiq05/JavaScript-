@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events</title>
+    <style>
+      #test {
+        height: 300px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: bisque;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="Fname">Name</label>
+      <input
+        type="text"
+        name=""
+        id="Fname"
+        onfocus="focusfn(this)"
+        onblur="blurfn(this)"
+        oninput="Inputfn(this)"
+        onchange="Changefn(this)"
+        onselect="selectfn()"
+      />
+      <br /><br />
+      <label for="">Class</label>
+      <input type="text" name="" onfocus="focusfn(this)" /> <br /><br />
+      <label for="">Country</label>
+      <select name="" id="">
+        <option value="">India</option>
+        <option value="">SriLanka</option>
+        <option value="">Nepal</option>
+        <option value="">China</option>
+      </select>
+    </form>
+
+    <div id="test"></div>
+
+    <script>
+      function focusfn(element) {
+        element.style.backgroundColor = "tan";
+      }
+      function blurfn(element) {
+        element.style.backgroundColor = "";
+      }
+      // function Inputfn(element) {
+      //   const x = element.value;
+      //   document.getElementById("test").innerHTML = x;
+      // }
+      function Changefn(element) {
+        const x = element.value;
+        document.getElementById("test").innerHTML = x;
+      }
+      function selectfn() {
+        console.log("Selected");
+      }
+    </script>
+  </body>
+</html>

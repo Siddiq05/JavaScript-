@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbol</title>
+  </head>
+  <body>
+    <script>
+      let id1 = Symbol("Hi");
+      let id2 = Symbol("Hi");
+      console.log(id1);
+      console.log(typeof id1);
+      console.log(id1 == id2); // id1 id2 both are unique values even though it look like same
+      // alert(id1);//Uncaught TypeError: Failed to execute 'alert' on 'Window': Cannot convert a Symbol value to a string
+      // alert(id1.toString());
+      alert(id1.description);
+    </script>
+  </body>
+</html>

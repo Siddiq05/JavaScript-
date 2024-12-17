@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array toString, valueOf & fill Methods</title>
+  </head>
+  <body>
+    <script>
+      // Array toString
+      let name = ["Sid", "John", "Tom", "Sam", "John"];
+      document.write(name + "<br><br>");
+      console.log(name);
+      let a = name.toString(); // It Converts array into string
+      document.write("String: " + a + "<br><br>");
+      console.log(a);
+
+      // Array valueOf
+      document.write(name.valueOf() + "<br><br>"); // Same as array it will print
+
+      // Array fill Methods
+      document.write(name.fill("Siddiq") + "<br><br>"); // It will fill each element of an array with same value as given in fill
+    </script>
+  </body>
+</html>

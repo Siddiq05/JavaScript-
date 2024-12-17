@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM CSS Styling Methods</title>
+    <style>
+      .Abc {
+        color: blueviolet;
+      }
+      .H2 {
+        color: rgb(226, 43, 110);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="H1">Style</h1>
+    <h2>className</h2>
+    <h3 class="EFG HIJ">classList</h3>
+    <script>
+      //DOM CSS Styling Methods
+      // 1. style
+      // 2. className
+      // 3. classList
+
+      // 1. style
+      document.querySelector(".H1").style.color = "blue";
+      document.querySelector(".H1").style.backgroundColor = "tan";
+      document.querySelector(".H1").style.border = "2px solid black";
+      document.querySelector(".H1").style.textAlign = "center";
+
+      // 2. className
+      document.querySelector("h2").className = "H2 Abc";
+      document.querySelector(".Abc").style.textAlign = "center";
+
+      // 3. classList
+      document.querySelector("h3").classList.add("XYZ", "ABC");
+      document.querySelector(".ABC").style.textAlign = "center";
+      document.querySelector(".ABC").style.color = "blueviolet";
+      document.querySelector("h3").classList.remove("EFG", "ABC");
+    </script>
+  </body>
+</html>

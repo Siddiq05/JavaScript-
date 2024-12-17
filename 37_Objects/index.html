@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        Fname: "Sid",
+        Lname: "Khan",
+        age: 27,
+        email: "test@mail.com",
+        Movies: ["Hulchal", "HeraPheri", "Raaz"],
+        Salary: function () {
+          return 30000;
+        },
+        Name: function () {
+          return this.Fname + " " + this.Lname;
+        },
+        living: {
+          city: "Kolar",
+          town: "MBL",
+        },
+      };
+      console.log(obj);
+      document.write(obj.Fname + "<br>");
+      document.write(obj.Movies[2] + "<br>");
+      document.write(obj.Salary() + "<br>");
+      document.write(obj.Name() + "<br>");
+      document.write(obj.living.city + "<br>");
+    </script>
+  </body>
+</html>

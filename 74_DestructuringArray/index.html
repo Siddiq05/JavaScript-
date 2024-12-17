@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Array</title>
+  </head>
+  <body>
+    <script>
+      const User = ["Sid", 27];
+      console.log(User);
+      //Destructuring Array in Es6
+      const [name, age] = User;
+      console.log(name);
+      console.log(age);
+
+      const User1 = [, , "Goa"];
+      const [name2, age2 = 15, city, area] = User1;
+      console.log(name2);
+      console.log(age2);
+      console.log(city);
+      console.log(area);
+      console.log(`array length : ${User1.length}`);
+
+      //Old Method
+      // let name1 = User[0];
+      // let age1 = User[1];
+      // console.log(name1);
+      // console.log(age1);
+    </script>
+  </body>
+</html>

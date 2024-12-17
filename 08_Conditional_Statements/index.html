@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08_Conditional_Statements & Ternary Operator</title>
+</head>
+<body>
+  <script>
+
+    let x=6, y=7, z=20;
+
+
+    // 1 Conditional_Statement
+     if (z>y) {
+      console.log(z + " is greater than "+y);
+     }
+
+
+    // 2 Conditional_Statement
+    if (x>y) {
+      console.log(x + " is greater than "+y);
+      
+    } else {
+      console.log(x +" is less than "+y);
+    }
+
+
+    // 3 Conditional_Statement
+    let a=1, b=2, c=3;
+
+
+    if (a>b) {
+      console.log(a + " is greater than "+b);
+      
+    } else if(b>c) {
+      console.log(b +" is less than "+c);
+    }else{
+      console.log(c +" is greater than " + b + " and " + a);
+      
+    }
+
+
+    // 4 Conditional Ternary Operator
+    (a>b) ? console.log(a + " is less than "+b) : console.log(b + " is greater than "+a);
+
+
+  </script>
+</body>
+</html>

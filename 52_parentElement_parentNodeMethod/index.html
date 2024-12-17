@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parentElement & parentNode Method</title>
+    <style>
+      .outer {
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: rgb(18, 105, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner {
+        height: 300px;
+        width: 350px;
+        background-color: rgb(80, 181, 18);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .inner div {
+        height: 100px;
+        width: 100px;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div>A</div>
+        <div>B</div>
+        <div id="Child-C">C</div>
+        <div>D</div>
+        <div>E</div>
+      </div>
+    </div>
+    <script>
+      //parentElement
+      let a = document.querySelector(".inner").parentElement;
+      console.log(a);
+      a.style.backgroundColor = "crimson";
+
+      //parentNode
+      let b = document.getElementById("Child-C").parentNode;
+      console.log(b);
+      b.style.backgroundColor = "grey";
+
+      let Main1 = document.getElementById("main").parentElement; // if parentElement doesnot have any parnent it will return null
+      console.log(Main1);
+      let Main = document.getElementById("main").parentNode; // if parentNode doesnot have any parnent it will return #document
+      console.log(Main);
+    </script>
+  </body>
+</html>

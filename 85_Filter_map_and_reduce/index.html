@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter map and reduce</title>
+  </head>
+  <body>
+    <script>
+      const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(`Nums: ${nums}`);
+
+      //filter ---> it will return a new array based on the given condition
+      let Fnums = nums.filter((num) => num > 4);
+      console.log(`filter: ${Fnums}`);
+
+      // Map ----> it will return a new array
+      let Mnums = nums.map((num) => num + 1);
+      console.log(`map: ${Mnums}`);
+
+      // Chaining
+      let Cnums = nums
+        .map((num) => num * 10)
+        .filter((num) => num > 60)
+        .map((num) => num - 1);
+      console.log(`Chaining: ${Cnums}`);
+
+      // Reduce (accumulator =dependes on initial value what we will give currentValue = is the value of arr ) ---> reduce((acc, cval)=>(),0)
+      let arr = [1, 2, 3, 4, 5];
+      const initialValue = 0; // only first time it will takes the initial value
+      const Rnums = arr.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+      );
+      console.log(`Chaining: ${Rnums}`);
+
+      // one more example of reduce
+      const cart = [
+        { item: "soaps", price: 200 },
+        { item: "rice", price: 300 },
+        { item: "veges", price: 400 },
+        { item: "oil", price: 100 },
+      ];
+      const TotalPrice = cart.reduce((acc, item) => acc + item.price, 0);
+      console.log(`TotalPrice: ${TotalPrice}`);
+    </script>
+  </body>
+</html>

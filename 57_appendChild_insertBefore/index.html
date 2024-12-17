@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>appendChild & insertBefore</title>
+    <style>
+      #test {
+        height: 300px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: bisque;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Create Methods</h1>
+    <div id="test">
+      <h2>Header</h2>
+      <h3>Header3</h3>
+    </div>
+    <script>
+      //createElement
+      const newElement = document.createElement("p");
+      console.log(newElement);
+
+      //createTextNode
+      const newText = document.createTextNode("Hello");
+      console.log(newText);
+
+      //createComment
+      const newComment = document.createComment("This is a comment");
+      console.log(newComment);
+
+      //appendChild
+      newElement.appendChild(newText);
+      console.log(newElement); //adding text in p(newElement)
+
+      const divTest = document.getElementById("test");
+      console.log(test);
+      // test.appendChild(newElement); //adding p(newElement) in div
+      test.appendChild(newComment); //adding Comment in div
+
+      //insertBefore
+      const nodes = divTest.children;
+      console.log(nodes);
+
+      divTest.insertBefore(newElement, divTest.children[1]); //childnodes[0]
+    </script>
+  </body>
+</html>

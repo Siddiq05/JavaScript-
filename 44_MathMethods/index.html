@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Methods</title>
+  </head>
+  <body>
+    <script>
+      //ceil & floor
+      let a = Math.ceil(2.7);
+      document.write(a + "<br>");
+      let b = Math.ceil(2.2);
+      document.write(a + "<br>");
+      let c = Math.floor(2.2);
+      document.write(c + "<br>");
+      let d = Math.floor(2.8);
+      document.write(c + "<br>");
+      let e = Math.ceil(-2.8);
+      document.write(e + "<br>");
+      let f = Math.floor(-2.1);
+      document.write(f + "<br>");
+
+      //round & trunc
+      let g = Math.round(2.2);
+      document.write(g + "<br>");
+      let h = Math.round(2.8);
+      document.write(h + "<br>");
+      let i = Math.round(-2.8);
+      document.write(i + "<br>");
+      let j = Math.round(-2.2);
+      document.write(j + "<br>");
+      let k = Math.trunc(2.2);
+      document.write(k + "<br>");
+      let l = Math.trunc(2.8);
+      document.write(l + "<br>");
+      let m = Math.trunc(-2.8);
+      document.write(m + "<br>");
+      let n = Math.trunc(-2.2);
+      document.write(n + "<br>");
+
+      //max(x,y,z,,,,n) & min(x,y,z,,,,n)
+      document.write(Math.max(-2.2, 3, 4, 50, 10) + "<br>");
+      document.write(Math.min(-2.2, 3, 4, 50, 10) + "<br>");
+
+      //sqrt & cbrt
+      document.write(Math.sqrt(64) + "<br>");
+      document.write(Math.cbrt(125) + "<br>"); // 5 * 5 * 5
+
+      //pow(x, y)
+      document.write(Math.pow(5, 3) + "<br>");
+
+      //random
+      document.write(Math.random() + "<br>");
+      document.write(Math.round(Math.random() * 10) + 1 + "<br>");
+
+      //abs
+      document.write(Math.abs(5.53) + "<br>");
+      document.write(Math.abs(-5.3) + "<br>");
+      document.write(Math.abs(null) + "<br>");
+      document.write(Math.abs("Hello") + "<br>");
+
+      //PI
+      document.write(Math.PI + "<br>");
+    </script>
+  </body>
+</html>

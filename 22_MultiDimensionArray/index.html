@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Dimension Array</title>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        ["Lion", "Tiger", "Panther"],
+        ["Sheep", "Goat", "Cow"],
+        ["Horse", "Zebra", "Donkey"],
+        ["Sparrow", "Eagle", "Parrot"],
+      ];
+      console.log(arr);
+      console.log(arr.length);
+      console.log(arr[0].length);
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          const element = arr[i][j];
+          document.write(element + " ");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
